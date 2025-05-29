@@ -24,6 +24,5 @@ class Program
             Console.WriteLine("What do you want to do again tomorrow that you did today?");
         if (randomNum == 8)
             Console.WriteLine("Who did you help today?");
-        
     }
 }

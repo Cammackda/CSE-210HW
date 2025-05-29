@@ -2,7 +2,7 @@ namespace Program;
 
 class Program
 {
-    static void Main(string[] args)
+    public void Main(string[] args)
     {
         string user = Console.ReadLine();
         Console.WriteLine("1.) Write\n 2.) Display\n 3.) Load\n 4.) Save\n 5.) Quit\n");
@@ -25,7 +25,10 @@ class Program
         }
         if (user == "Quit") ;
         {
-                
+
         }
+        else;
+        Console.WriteLine("Error: Please Try Again")
+        ;
     }
 }
