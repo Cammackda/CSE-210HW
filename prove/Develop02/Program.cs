@@ -7,27 +7,28 @@ class Program
         string user = Console.ReadLine();
         Console.WriteLine("1.) Write\n 2.) Display\n 3.) Load\n 4.) Save\n 5.) Quit\n");
 
-        if (user == "Write") ;
+        if (user == "Write") 
         {
 
         }
-        if (user == "Display") ;
+        if (user == "Display") 
         {
 
         }
-        if (user == "Load") ;
+        if (user == "Load") 
         {
 
         }
-        if (user == "Save") ;
+        if (user == "Save") 
         {
 
         }
-        if (user == "Quit") ;
+        if (user == "Quit") 
         {
 
         }
-        else;
+
+        else{}
         Console.WriteLine("Error: Please Try Again")
         ;
     }
