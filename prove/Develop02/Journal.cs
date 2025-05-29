@@ -4,7 +4,7 @@ namespace Journal;
 class Program
 {
 
-    static void Main(string[] args)
+    public void Main(string[] args)
     {
         Console.WriteLine("Hello Johnny!");
         Console.WriteLine("");

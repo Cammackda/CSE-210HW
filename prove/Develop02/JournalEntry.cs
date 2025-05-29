@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 namespace JournalEntry;
 class Program
 {
-    static void Main(string[] args)
+    public void Main(string[] args)
     {
         Random rnd = new Random();
         //if record == "Write"//
