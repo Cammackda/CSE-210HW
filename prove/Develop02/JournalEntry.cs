@@ -7,7 +7,10 @@ class Program
     {
         Random rnd = new Random();
         //if record == "Write"//
+        
         int randomNum = rnd.Next(1 - 8);
+        DateTime theCurrentTime = DateTime.Now;
+        string dateText = theCurrentTime.ToShortDateString();
         if (randomNum == 1)
             Console.WriteLine("What was your favorite thing about today?");
         if (randomNum == 2)
@@ -24,5 +27,6 @@ class Program
             Console.WriteLine("What do you want to do again tomorrow that you did today?");
         if (randomNum == 8)
             Console.WriteLine("Who did you help today?");
+           
     }
 }

@@ -9,7 +9,8 @@ class Program
 
         if (user == "Write") 
         {
-
+            DateTime theCurrentTime = DateTime.Now;
+            string dateText = theCurrentTime.ToShortDateString();
         }
         if (user == "Display") 
         {
