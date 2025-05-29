@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 
 namespace Journal;
-class Program
+class Journal
 {
 
     public void Main(string[] args)
