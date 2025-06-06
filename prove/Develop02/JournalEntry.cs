@@ -1,12 +1,16 @@
 using System.Security.Cryptography;
 
 namespace JournalEntry;
-class Program
+class JournalEntry
 {
+    
     public void Main(string[] args)
     {
+
         Random rnd = new Random();
         //if record == "Write"//
+        string record = Console.ReadLine();
+        Console.WriteLine(record);
         
         int randomNum = rnd.Next(1 - 8);
         DateTime theCurrentTime = DateTime.Now;
@@ -27,6 +31,6 @@ class Program
             Console.WriteLine("What do you want to do again tomorrow that you did today?");
         if (randomNum == 8)
             Console.WriteLine("Who did you help today?");
-           
+
     }
 }

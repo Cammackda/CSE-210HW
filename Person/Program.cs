@@ -5,8 +5,9 @@
         Person myPerson = new Person("Bob", "Lemi", 34);
         Console.WriteLine(myPerson.GetPersonInformation());
 
-        PoliceMan myPoliceMan = new PoliceMan("Betty", "Crocker", 23);
-        Console.WriteLine(myPoliceMan.GetPersonInformation)
+        PoliceMan myPoliceMan = new PoliceMan("Betty", "Crocker", 23, "Bat");
+        //Console.WriteLine(myPoliceMan.GetPersonInformation)
+        Console.WriteLine(myPoliceMan.GetPoliceManInformation());
     }
 }
 
