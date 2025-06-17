@@ -4,13 +4,11 @@ namespace JournalEntry;
 class JournalEntry
 {
     
-    public void Main(string[] args)
+    public void CreateJournal(string[] args)
     {
 
         Random rnd = new Random();
         //if record == "Write"//
-        string record = Console.ReadLine();
-        Console.WriteLine(record);
         
         int randomNum = rnd.Next(1 - 8);
         DateTime theCurrentTime = DateTime.Now;

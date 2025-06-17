@@ -4,7 +4,7 @@ namespace Journal;
 class Journal
 {
 
-    public void Main(string[] args)
+    public void Bob(string[] args)
     {
         
     }
