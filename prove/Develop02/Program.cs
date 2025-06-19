@@ -20,7 +20,7 @@ class Program
                     break;
             }
         }
-        // if (user == "Write")
+        // if (user == "Write") ---
             // {
             //     DateTime theCurrentTime = DateTime.Now;
             //     string dateText = theCurrentTime.ToShortDateString();
