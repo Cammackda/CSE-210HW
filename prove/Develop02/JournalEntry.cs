@@ -1,34 +1,51 @@
-using System.Security.Cryptography;
-
-namespace JournalEntry;
-class JournalEntry
+using System;
+namespace JournalEntry
 {
-    
-    public void CreateJournal(string[] args)
+    public class Entry
     {
+        public string Date { get; set; }
+        public string Prompt { get; set; }
+        public string Response { get; set; }
 
-        Random rnd = new Random();
-        //if record == "Write"//
-        
-        int randomNum = rnd.Next(1 - 8);
-        DateTime theCurrentTime = DateTime.Now;
-        string dateText = theCurrentTime.ToShortDateString();
-        if (randomNum == 1)
-            Console.WriteLine("What was your favorite thing about today?");
-        if (randomNum == 2)
-            Console.WriteLine("What was the weather like?");
-        if (randomNum == 3)
-            Console.WriteLine("What was hardest about today?");
-        if (randomNum == 4)
-            Console.WriteLine("Who impacted you the most?");
-        if (randomNum == 5)
-            Console.WriteLine("What are you most grateful for today?");
-        if (randomNum == 6)
-            Console.WriteLine("How will you take what you learned todya into tomorrow?");
-        if (randomNum == 7)
-            Console.WriteLine("What do you want to do again tomorrow that you did today?");
-        if (randomNum == 8)
-            Console.WriteLine("Who did you help today?");
-
+    public override string ToString()
+        {
+            return $"Date: {Date}\nPrompt: {Prompt}\nResponse: {Response}\n";
+        }
     }
+
+public class JournalEntry
+{
+    private static readonly String[] prompts = new string[]
+    {
+            "What was your favorite thing about today?",
+            "What was the weather like?",
+            "What was hardest about today?",
+            "Who impacted you the most?",
+            "What are you most grateful for today?",
+            "How will you take what you learned today into tomorrow?",
+            "What do you want to do again tomorrow that you did today?",
+            "Who did you help today?"
+
+    };
+
+    public Entry CreateJournal()
+    {
+        Random rnd = new Random();
+        int index = rnd.Next(0, prompts.Length);
+        string selectedPrompt = prompts[index];
+        string dateText = DateTime.Now.ToShortDateString();
+
+        Console.WriteLine(selectedPrompt);
+        Console.Write("> ");
+        string response = Console.ReadLine();
+
+        return new Entry
+        {
+            Date = dateText,
+            Prompt = selectedPrompt,
+            Response = response
+        };
+    }
+    };
+
 }

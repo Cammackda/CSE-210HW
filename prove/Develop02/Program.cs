@@ -30,30 +30,5 @@ class Program
                     break;
             }
         }
-        // if (user == "Write") ---
-            // {
-            //     DateTime theCurrentTime = DateTime.Now;
-            //     string dateText = theCurrentTime.ToShortDateString();
-            // }
-            // if (user == "Display")
-            // {
-
-            // }
-            // if (user == "Load")
-            // {
-
-            // }
-            // if (user == "Save")
-            // {
-
-            // }
-            // if (user == "Quit")
-            // {
-
-            // }
-
-            // else { }
-            // Console.WriteLine("Error: Please Try Again")
-            // ;
-        }
+    }
 }
