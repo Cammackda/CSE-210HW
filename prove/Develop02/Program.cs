@@ -1,32 +1,45 @@
+using JournalEntry;
+
 namespace Program;
 
 class Program
 {
     public static void Main(string[] args)
     {
+        JournalEntry.JournalEntry entryCreator = new JournalEntry.JournalEntry();
+
+        Journal journal = new Journal();
+
         int userResponse = -1;
         while (userResponse != 5)
         {
-            Console.WriteLine("1.) Write\n 2.) Display\n 3.) Load\n 4.) Save\n 5.) Quit\n");
+            Console.WriteLine("1.) Write\n2.) Display\n3.) Load\n4.) Save\n5.) Quit\n");
             userResponse = int.Parse(Console.ReadLine());
 
             switch (userResponse)
             {
                 case 1:
-                    Console.WriteLine("Write");
-                    
+                    Entry newEntry = entryCreator.CreateJournal();
+                    journal.AddEntry(newEntry);
                     break;
                 case 2:
-                    Console.WriteLine("Display");
+                    journal.DisplayEntries();
                     break;
                 case 3:
-                    Console.WriteLine("Load");
+                    Console.Write("Enter filename to load from: ");
+                    string loadFile = Console.ReadLine();
+                    journal.LoadFromFile(loadFile);
                     break;
                 case 4:
-                    Console.WriteLine("Save");
+                    Console.Write("Enter filename to save to: ");
+                    string saveFile = Console.ReadLine();
+                    journal.SaveToFile(saveFile);
                     break;
                 case 5:
-                    Console.WriteLine("Quit");
+                    Console.WriteLine("Goodbye!");
+                    break;
+                default:
+                    Console.WriteLine("That won't work; try again!");
                     break;
             }
         }
