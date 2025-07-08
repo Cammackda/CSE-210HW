@@ -3,7 +3,7 @@ class Reflection
 
     public void DisplayPrompt(string[] args)
     {
-
+        Console.WriteLine("This activity will help you reflect on previous experiences that will help find strength and happiness.");
         Random rnd = new Random();
         //if record == "Write"//
 

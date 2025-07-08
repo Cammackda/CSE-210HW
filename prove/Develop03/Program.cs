@@ -17,16 +17,13 @@ class Program
             switch (userResponse)
             {
                 case 1:
-                    Entry newEntry = entryCreator.CreateJournal();
-                    journal.AddEntry(newEntry);
+                    
                     break;
                 case 2:
-                    journal.DisplayEntries();
+                    
                     break;
                 case 3:
-                    Console.Write("Enter filename to load from: ");
-                    string loadFile = Console.ReadLine();
-                    journal.LoadFromFile(loadFile);
+                    
                     break;
                 case 4:
                     Console.WriteLine("Goodbye!");

@@ -3,7 +3,7 @@ class Listing
     
     public void DisplayQuestion(string[] args)
     {
-
+        Console.WriteLine("This activity will help you find positivity in your life right now.");
         Random rnd = new Random();
         //if record == "Write"//
         
@@ -21,7 +21,7 @@ class Listing
 
         if (randomNum == 4)
             Console.WriteLine("When have you felt the Holy Ghost this month?");
-            
+
         if (randomNum == 5)
             Console.WriteLine("Who are some of your personal heroes?");           
     }
