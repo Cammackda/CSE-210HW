@@ -11,9 +11,9 @@ class Program
         int userResponse = -1;
         while (userResponse != 5)
         {
-            Console.WriteLine("1.) Start breathingh activity\n2.) Start reflecting activity\n3.) Start listing activity\n4.) Quit\n");
+            Console.WriteLine("1.) Start Breathing Activity\n2.) Start Reflecting Activity\n3.) Start Listing Activity\n4.) Quit\n");
             userResponse = int.Parse(Console.ReadLine());
-
+            
             switch (userResponse)
             {
                 case 1:
