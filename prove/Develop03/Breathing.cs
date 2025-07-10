@@ -1,23 +1,22 @@
-class Breathing
+public class Breathing: MindfulnessActivity
 {
 
-    public void DisplayQuestion(string[] args)
+    public void Start()
     {
-        Console.WriteLine("This activity will help you find mental clarity as it pushes out all hectic thoughts and helps you find inner balance.");
-        Thread.Sleep(1000);
-        Console.WriteLine("The excersize will begin. In 3 seconds.");
-        Console.Write("+");
-        Thread.Sleep(3000);
-        Console.Write("\b \b"); // Erase the + character
-        Console.Write("-"); // Replace it with the - character
+        DisplayStartingMessage("This activity will help you find mental clarity",
+        " as it pushes out all hectic thoughts and helps you find inner balance.");
 
-        Console.WriteLine("Breathe in...");
-        Thread.Sleep(2000);
-        Console.WriteLine("Breathe out...");
-        Thread.Sleep(2000);
-        Console.WriteLine("Breathe in...");
-        Thread.Sleep(2000);
-        Console.WriteLine("Breathe out...");
-        Thread.Sleep(2000);
+        DateTime endTime = DateTime.Now.AddSeconds(duration);
+
+        while (DateTime.Now < endTime)
+        {
+            Console.Write("Breathe in... ");
+            Countdown(4);
+            Console.Write("Breathing out...");
+            Console.WriteLine();
+        }
+
+
+        DisplayEndingMessage("Breathing Activity");
     }
 }

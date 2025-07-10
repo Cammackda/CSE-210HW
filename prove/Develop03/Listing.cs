@@ -1,28 +1,52 @@
-class Listing
+using System.Runtime.CompilerServices;
+
+public class Listing : MindfulnessActivity
 {
-    
-    public void DisplayQuestion(string[] args)
+
+    private string[] prompts = {
+        "Who are people that you appreciate?",
+        "What are personal strengths of yours?",
+        "Who are people that you have helped this week?",
+        "When have you felt the Holy Ghost this month?",
+        "Who are some of your personal heroes?"  ,
+        };
+
+    public void Start()
     {
-        Console.WriteLine("This activity will help you find positivity in your life right now.");
+        DisplayStartingMessage("Listing Activity",
+        "This activity will help you list and remember good things in our life and lift your mind!");
+
         Random rnd = new Random();
-        //if record == "Write"//
-        
-        int randomNum = rnd.Next(1 - 8);
-        DateTime theCurrentTime = DateTime.Now;
-        string dateText = theCurrentTime.ToShortDateString();
-        if (randomNum == 1)
-            Console.WriteLine("Who are people that you appreciate?");
+        string prompt = prompts[rnd.Next(prompts.Length)];
+        Console.WriteLine("\nList as many responses as you can to the following prompt:");
+        Console.WriteLine($"--- {prompt} ---");
+        Console.WriteLine("\nYou have a few seconds to think...");
+        Countdown(5);
 
-        if (randomNum == 2)
-            Console.WriteLine("What are personal strengths of yours?");
+        DateTime endTime = DateTime.Now.AddSeconds(duration);
+        List<string> userResponses = new List<string>();
 
-        if (randomNum == 3)
-            Console.WriteLine("Who are people that you have helped this week?");
+        Console.WriteLine("Start listing your items (press Enter after each):");
 
-        if (randomNum == 4)
-            Console.WriteLine("When have you felt the Holy Ghost this month?");
+        while (DateTime.Now < endTime)
+        {
+            if (Console.KeyAvailable)
+            {
+                string input = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(input))
+                {
+                    userResponses.Add(input);
+                }
+            }
+        }
 
-        if (randomNum == 5)
-            Console.WriteLine("Who are some of your personal heroes?");           
+        Console.WriteLine($"\nYou listed {userResponses.Count} items. ");
+
+        DisplayEndingMessage("Listing Activity");
     }
+
+    
+
+
+
 }
