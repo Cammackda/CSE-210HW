@@ -3,7 +3,7 @@ class Program
 {
     public static void Main(string[] args)
     {
-
+        GoalManager manager = new GoalManager();
 
         int userResponse = -1;
 
@@ -21,14 +21,19 @@ class Program
             switch (userResponse)
             {
                 case 1:
+                    manager.CreateGoal();
                     break;
                 case 2:
+                    manager.DisplayGoals();
                     break;
                 case 3:
+                    manager.SaveGoals();
                     break;
                 case 4:
+                    manager.LoadGoals();
                     break;
                 case 5:
+                    manager.RecordEvent();
                     break;
                 case 6:
                     Console.WriteLine("Goodbye!");
