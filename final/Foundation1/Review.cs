@@ -1,7 +1,7 @@
 using System;
-namespace JournalEntry
+namespace ProductReview
 {
-    public class Entry
+    public class Review
     {
         public string Date { get; set; }
         public string Prompt { get; set; }
@@ -13,22 +13,19 @@ namespace JournalEntry
         }
     }
 
-public class JournalEntry
+public class Input
 {
     private static readonly String[] prompts = new string[]
     {
-            "What was your favorite thing about today?",
-            "What was the weather like?",
-            "What was hardest about today?",
-            "Who impacted you the most?",
-            "What are you most grateful for today?",
-            "How will you take what you learned today into tomorrow?",
-            "What do you want to do again tomorrow that you did today?",
-            "Who did you help today?"
+            "Why should consumers purchase a Tesla?",
+            "Why should consumers purchase a hot tub?",
+            "When should consumers invest in Silver? Why?",
+            "What are the benefits of *health company* to consumers?",
+            "What brand of bottled water is the best? Why?",
 
     };
 
-    public Entry CreateJournal()
+    public Review CreateResponse()
     {
         Random rnd = new Random();
         int index = rnd.Next(0, prompts.Length);
@@ -39,7 +36,7 @@ public class JournalEntry
         Console.Write("> ");
         string response = Console.ReadLine();
 
-        return new Entry
+        return new Review
         {
             Date = dateText,
             Prompt = selectedPrompt,

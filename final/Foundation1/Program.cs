@@ -1,14 +1,15 @@
 using System;
-
+using ProductReview;
+using DescriptionInput;
 namespace Program;
 
 class Program
 {
     public static void Main(string[] args)
     {
-        JournalEntry.JournalEntry entryCreator = new JournalEntry.JournalEntry();
+        Input  entryCreator = new Input();
 
-        Journal journal = new Journal();
+        Description description = new Description();
 
         int userResponse = -1;
         while (userResponse != 5)
@@ -19,21 +20,21 @@ class Program
             switch (userResponse)
             {
                 case 1:
-                    Entry newEntry = entryCreator.CreateJournal();
-                    journal.AddEntry(newEntry);
+                    Review newReview = entryCreator.CreateResponse();
+                    description.AddEntry(newReview);
                     break;
                 case 2:
-                    journal.DisplayEntries();
+                    description.DisplayEntries();
                     break;
                 case 3:
                     Console.Write("Enter filename to load from: ");
                     string loadFile = Console.ReadLine();
-                    journal.LoadFromFile(loadFile);
+                    description.LoadFromFile(loadFile);
                     break;
                 case 4:
                     Console.Write("Enter filename to save to: ");
                     string saveFile = Console.ReadLine();
-                    journal.SaveToFile(saveFile);
+                    description.SaveToFile(saveFile);
                     break;
                 case 5:
                     Console.WriteLine("Goodbye!");
