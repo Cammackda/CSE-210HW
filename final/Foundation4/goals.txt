@@ -1,0 +1,2 @@
+0
+SimpleGoal|Swimming|I go to a pool and do laps.|30|False
